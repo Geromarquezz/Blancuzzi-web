@@ -1,0 +1,68 @@
+/* Layout global para toda la aplicación */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* Contenedor principal que automáticamente agrega espacio para el navbar */
+.main-content {
+  flex: 1;
+  min-height: 70vh;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* Asegurar que todos los elementos hereden Poppins */
+.app-container *,
+.main-content * {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* Para páginas normales que necesitan margin-top automático según altura del navbar */
+.main-content > *:not(.hero):not(.turnos-page):not(.home-page) {
+  margin-top: 80px; /* Altura del navbar en desktop */
+}
+
+/* Responsive para tablet */
+@media (max-width: 768px) {
+  .main-content > *:not(.hero):not(.turnos-page):not(.home-page) {
+    margin-top: 70px; /* Altura del navbar en tablet */
+    min-height: calc(100vh - 70px);
+  }
+}
+
+/* Responsive para móvil */
+@media (max-width: 480px) {
+  .main-content > *:not(.hero):not(.turnos-page):not(.home-page) {
+    margin-top: 70px; /* Altura del navbar en móvil */
+    min-height: calc(100vh - 70px);
+  }
+}
+
+/* Clases utilitarias para casos especiales */
+.with-navbar-spacing {
+  margin-top: 80px !important;
+}
+
+.without-navbar-spacing {
+  margin-top: 0 !important;
+}
+
+/* Responsive para las clases utilitarias */
+@media (max-width: 768px) {
+  .with-navbar-spacing {
+    margin-top: 70px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .with-navbar-spacing {
+    margin-top: 70px !important;
+  }
+}
+
+/* Asegurar que las páginas ocupen todo el ancho disponible */
+.main-content > * {
+  width: 100%;
+}

@@ -1,0 +1,269 @@
+/* Sección Contactos */
+.contact {
+    padding: 6rem 0;
+    background: #f8fafcb7;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 4px solid #87ceeb;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: #87ceeb;
+    min-width: 50px;
+    text-align: center;
+}
+
+.contact-item h3 {
+    color: #2c5282;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.contact-item p {
+    color: #4a5568;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.contact-item a {
+    color: #4a5568;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Formulario de agendamiento de turnos */
+.appointment-form {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f0f8ff;
+}
+
+.appointment-title {
+    text-align: center;
+    color: #2c5282;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #2c5282;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #87ceeb;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.submit-appointment {
+    background: linear-gradient(135deg, #25d366, #1ea352);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+}
+
+.submit-appointment:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+.submit-appointment i {
+    font-size: 1.2rem;
+}
+
+/* Responsividad para tablet */
+@media (max-width: 768px) {
+    .contact {
+        padding: 4rem 0;
+    }
+
+    .contact-content {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .contact-item i {
+        font-size: 1.8rem;
+        min-width: 45px;
+    }
+
+    .contact-item h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Responsividad para móvil */
+@media (max-width: 480px) {
+    .contact {
+        padding: 4rem 0;
+    }
+
+    .contact-item {
+        padding: 1.2rem;
+        gap: 0.8rem;
+    }
+
+    .contact-item i {
+        font-size: 1.6rem;
+        min-width: 40px;
+    }
+
+    .contact-item h3 {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .contact-item p {
+        font-size: 0.9rem;
+    }
+
+    /* Formulario responsive para tablet */
+    .appointment-form {
+        padding: 2rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Responsividad para móvil */
+@media (max-width: 480px) {
+    .contact {
+        padding: 4rem 0;
+    }
+
+    .contact-item {
+        padding: 1.2rem;
+        gap: 0.8rem;
+    }
+
+    .contact-item i {
+        font-size: 1.6rem;
+        min-width: 40px;
+    }
+
+    .contact-item h3 {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .contact-item p {
+        font-size: 0.9rem;
+    }
+
+    /* Formulario responsive para móvil */
+    .appointment-form {
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .appointment-title {
+        font-size: 1.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 14px;
+        font-size: 0.95rem;
+    }
+
+    .submit-appointment {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
