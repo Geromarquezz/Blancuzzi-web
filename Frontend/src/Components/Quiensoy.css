@@ -1,0 +1,233 @@
+/* Sección Sobre Mí */
+.about {
+    padding: 6rem 0;
+    background: white;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2.5rem;
+    align-items: start;
+    grid-template-areas: 
+        "carousel text"
+        "icons icons";
+}
+
+.about-carousel {
+    grid-area: carousel;
+}
+
+.about-text {
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 520px;
+    padding: 2rem;
+}
+
+.about-description {
+    font-size: 1.2rem;
+    color: #4a5568;
+    text-align: left;
+    line-height: 2;
+    margin: 0;
+    align-items: center;
+}
+
+/* Carrusel de imágenes en About */
+.about-carousel {
+    grid-area: carousel;
+    position: relative;
+    text-align: center;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor para controlar el tamaño de las imágenes */
+.about-image-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 6px solid white;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: opacity 2s ease-in-out, transform 0.3s ease;
+}
+
+.about-image-container:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    position: static;
+    opacity: 1;
+    transform: none;
+}
+
+.about-image.active {
+    opacity: 1;
+}
+
+/* Mostrar contenedor cuando la imagen está activa */
+.about-image-container.active {
+    opacity: 1;
+}
+
+/* Zoom especial para la imagen 3 del carrusel about */
+.about-image.zoom-50 {
+    transform: scale(1.5);
+}
+
+.about-image.zoom-50:hover {
+    transform: scale(1.6);
+}
+
+.about-icons {
+    grid-area: icons;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.icon-item {
+    text-align: center;
+    padding: 2rem;
+    background: #f8fafc;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.icon-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.icon-item i {
+    font-size: 3rem;
+    color: #87ceeb;
+    margin-bottom: 1rem;
+}
+
+.icon-item h3 {
+    color: #2c5282;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.icon-item p {
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+/* Responsividad para tablet */
+@media (max-width: 768px) {
+    /* About section responsive */
+    .about-content {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "carousel"
+            "text"
+            "icons";
+        gap: 3rem;
+    }
+
+    .about-description {
+        text-align: center;
+    }
+
+    .about-text {
+        height: 420px;
+        padding: 1.5rem;
+    }
+
+    .about-carousel {
+        min-height: 420px;
+    }
+
+    .about-image-container {
+        max-width: 350px;
+        height: 400px;
+    }
+
+    .about-icons {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .about-icons {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsividad para móvil */
+@media (max-width: 480px) {
+    .about {
+        padding: 4rem 0;
+    }
+
+    /* About section mobile */
+    .about-content {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "carousel"
+            "text"
+            "icons";
+        gap: 2rem;
+    }
+
+    .about-text {
+        min-height: 350px;
+        height: auto;
+        padding: 1.5rem;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .about-carousel {
+        min-height: 350px;
+    }
+
+    .about-image-container {
+        max-width: 280px;
+        height: 320px;
+    }
+
+    .about-icons {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .icon-item {
+        padding: 1.5rem;
+    }
+}

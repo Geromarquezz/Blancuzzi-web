@@ -1,0 +1,127 @@
+/* Sección Mis Trabajos */
+.works {
+    padding: 6rem 0 0;
+    background: #f8fafc43;
+    overflow: hidden;
+}
+.carousel {
+    margin: 80px auto;
+    width: 90%;
+    display: flex;
+    overflow: hidden;
+    gap: 1em;
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2em;
+    animation: scroll-infinite 40s infinite linear;
+    padding-right: 1em;
+    min-width: max-content;
+    margin: 30px;
+}
+.card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 250px;
+    min-height: 250;
+    max-width: 250px;
+    max-height: 300px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    padding: 1.5rem 1rem 1rem;
+    color: #2c5282;
+    font-weight: 600;
+    font-size: 1.1rem;
+    overflow: hidden;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 1rem;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.card:hover img {
+    transform: scale(1.05);
+}
+.card img {
+    width: 100%;
+    border-radius: 15px;
+    max-width: 250px;
+    max-height: 250px;
+}
+@keyframes scroll-infinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsividad para tablet */
+@media (max-width: 768px) {
+    .works {
+        padding: 4rem 0 0;
+    }
+
+    .carousel {
+        margin: 60px auto;
+        width: 95%;
+    }
+
+    .group {
+        gap: 1.5em;
+        margin: 20px;
+    }
+
+    .card {
+        min-width: 220px;
+        max-width: 220px;
+        padding: 1.2rem 0.8rem 1rem;
+    }
+}
+
+/* Responsividad para móvil */
+@media (max-width: 480px) {
+    .works {
+        padding: 3rem 0 0;
+    }
+
+    .carousel {
+        margin: 40px auto;
+        width: 100%;
+    }
+
+    .group {
+        gap: 1em;
+        margin: 15px;
+    }
+
+    .card {
+        min-width: 180px;
+        max-width: 180px;
+        padding: 1rem 0.5rem 0.8rem;
+        font-size: 1rem;
+    }
+
+    .card img {
+        max-width: 180px;
+        max-height: 180px;
+    }
+}

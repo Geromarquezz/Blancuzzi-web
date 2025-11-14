@@ -1,0 +1,113 @@
+/* Personalización de React Toastify */
+
+/* Contenedor principal */
+.Toastify__toast-container {
+  z-index: 9999;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Toast general */
+.Toastify__toast {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  font-size: 0.95rem;
+  min-height: 64px;
+}
+
+/* Toast de éxito */
+.Toastify__toast--success {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+}
+
+.Toastify__toast--success .Toastify__toast-icon {
+  color: white;
+}
+
+/* Toast de error */
+.Toastify__toast--error {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: white;
+}
+
+.Toastify__toast--error .Toastify__toast-icon {
+  color: white;
+}
+
+/* Toast de info */
+.Toastify__toast--info {
+  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+  color: white;
+}
+
+.Toastify__toast--info .Toastify__toast-icon {
+  color: white;
+}
+
+/* Toast de warning */
+.Toastify__toast--warning {
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+  color: #212529;
+}
+
+.Toastify__toast--warning .Toastify__toast-icon {
+  color: #212529;
+}
+
+/* Barra de progreso */
+.Toastify__progress-bar {
+  height: 4px;
+}
+
+.Toastify__progress-bar--success {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.Toastify__progress-bar--error {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.Toastify__progress-bar--info {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.Toastify__progress-bar--warning {
+  background: rgba(33, 37, 41, 0.7);
+}
+
+/* Botón de cerrar */
+.Toastify__close-button {
+  color: white;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}
+
+.Toastify__toast--warning .Toastify__close-button {
+  color: #212529;
+}
+
+/* Animaciones personalizadas */
+.Toastify__toast {
+  animation-duration: 0.4s;
+}
+
+/* Responsive */
+@media only screen and (max-width: 480px) {
+  .Toastify__toast-container {
+    width: 100vw;
+    padding: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+  }
+  
+  .Toastify__toast {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+}
