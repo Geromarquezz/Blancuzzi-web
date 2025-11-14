@@ -36,6 +36,9 @@ services:
       NODE_ENV: development
       TZ: America/Argentina/Buenos_Aires
       DB_HOST: postgres
+    volumes:
+      - ./Backend:/app
+      - /app/node_modules
     depends_on:
       postgres:
         condition: service_healthy
@@ -58,13 +61,18 @@ services:
     container_name: blancuzzi-frontend
     restart: unless-stopped
     ports:
-      - "80:80"
+      - "5173:5173"
+    environment:
+      - VITE_API_BASE_URL=http://localhost:3004
+    volumes:
+      - ./Frontend:/app
+      - /app/node_modules
     depends_on:
       - backend
     networks:
       - blancuzzi-network
     healthcheck:
-      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:5173/"]
       interval: 30s
       timeout: 10s
       retries: 3
