@@ -12,7 +12,6 @@ export const handleApiResponse = async (response, data) => {
         const errorMessage = data.message || 'Demasiadas solicitudes. Por favor, espere unos minutos e intente nuevamente.';
         toast.error(errorMessage, {
             autoClose: 5000,
-            icon: '⏱️'
         });
         return { 
             success: false, 
@@ -27,7 +26,6 @@ export const handleApiResponse = async (response, data) => {
         const errorMessage = data.message || 'Sesión expirada. Por favor, inicie sesión nuevamente.';
         toast.error(errorMessage, {
             autoClose: 4000,
-            icon: '🔒'
         });
         return { 
             success: false, 
@@ -56,7 +54,6 @@ export const handleApiResponse = async (response, data) => {
         // Para otros errores 403, mostrar toast
         toast.error(errorMessage, {
             autoClose: 4000,
-            icon: '🚫'
         });
         return { 
             success: false, 
@@ -71,7 +68,6 @@ export const handleApiResponse = async (response, data) => {
         const errorMessage = 'Error del servidor. Por favor, intente más tarde.';
         toast.error(errorMessage, {
             autoClose: 4000,
-            icon: '�'
         });
         return { 
             success: false, 
@@ -141,7 +137,6 @@ export const apiRequest = async (url, options = {}) => {
         console.error('Error en petición API:', error);
         toast.error('Error de conexión con el servidor', {
             autoClose: 3000,
-            icon: '📡'
         });
         return { 
             success: false, 

@@ -10,7 +10,6 @@ const __dirname = path.dirname(__filename);
 dotenv.config({ path: path.resolve(__dirname, '../.env.dev') });
 
 export const pool = new pg.Pool({
-        // Configuración local (Docker)
         host: process.env.DB_HOST,
         port: process.env.DB_PORT,
         database: process.env.DB_NAME,

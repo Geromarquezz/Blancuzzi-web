@@ -17,14 +17,14 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-E
         email VARCHAR(100) UNIQUE NOT NULL,
         password VARCHAR(255) NOT NULL,
         google_id VARCHAR(100) UNIQUE,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        reset_password_otp VARCHAR(6),
-        reset_password_otp_expire_at TIMESTAMP,
         is_verified BOOLEAN DEFAULT FALSE,
         is_blocked BOOLEAN NOT NULL DEFAULT FALSE,
         verify_otp VARCHAR(6),
-        verify_otp_expire_at TIMESTAMP
+        verify_otp_expire_at TIMESTAMP,
+        reset_password_otp VARCHAR(6),
+        reset_password_otp_expire_at TIMESTAMP,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
 
     -- ============================================

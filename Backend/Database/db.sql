@@ -49,3 +49,6 @@
 
 -- -- Directorio actual
 -- cd C:\Users\gerit\OneDrive\Escritorio\Proyectos\Blancuzzi web
+
+-- Conectarse a la base de datos
+-- docker exec -it blancuzzi-db psql -U postgres -d blancuzzi_db

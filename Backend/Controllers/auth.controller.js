@@ -93,8 +93,8 @@ export const login = async (req, res) => {
 
         res.cookie('token', token, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === 'production', //Si esta en production es true, esto agrega la capa de "s" en https
-            sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'strict', // SI estamos en localhost es lo mismo pero podemos tener en produccion 2 dominios uno para back y otro para front
+            secure: process.env.NODE_ENV === 'production',
+            sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'strict',
             maxAge: 7 * 24 * 60 * 60 * 1000 // Transformarlo en 7 dias
         });
 

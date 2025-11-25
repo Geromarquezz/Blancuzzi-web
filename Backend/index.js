@@ -22,6 +22,15 @@ const FRONTEND_URL = process.env.FRONTEND_URL;
 const PORT = process.env.PORT;
 const app = express();
 
+// Configurar trust proxy para rate limiter y headers X-Forwarded-*
+// En desarrollo: trust localhost
+// En producción: trust proxy (Nginx, Docker, etc.)
+if (process.env.NODE_ENV === 'production') {
+    app.set('trust proxy', 1); // Trust first proxy
+} else {
+    app.set('trust proxy', 'loopback'); // Trust localhost en desarrollo
+}
+
 // Configurar CORS para desarrollo y producción
 const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(',')
 
@@ -84,7 +93,7 @@ const startServer = async () => {
         }
 
 
-        app.listen(PORT, () => {
+        app.listen(PORT, '0.0.0.0', () => {
             console.log('─────────────────────────────────────────');
             console.log(`URL: ${BACKEND_URL}`);
             console.log(`URL: ${FRONTEND_URL}`);
