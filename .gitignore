@@ -3,12 +3,17 @@
 .env.*
 *.env
 
-# Docker ignore files
+# Docker files with credentials
+docker-compose.local.yml
+docker-compose.production.yml
 .dockerignore
 
 # Sensitive configuration files
 Client ID de google auth local.json
 Client ID de google auth Produccion.json
+
+# Database backups
+backups/
 
 # Node modules
 node_modules/
