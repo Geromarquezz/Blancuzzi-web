@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
-import logoImg from '../assets/Fotos/Logosinfondo.png'
+import logoImg from '../assets/Fotos/Logo-sin-fondo.webp'
 import './Navbar.css'
 
 

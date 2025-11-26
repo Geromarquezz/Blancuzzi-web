@@ -34,6 +34,11 @@
 }
 #sinfondo-hero{
     padding-right: 20px;
+    margin-top: 20px;
+}
+
+#sinfondo1-hero{
+    top: 20px;
 }
 
 .doctor-image {
@@ -237,10 +242,16 @@
         object-position: top center;
     }
 
-    #sinfondo1-hero{
-        padding-right: 0;
-        object-fit: contain;
-        object-position: top center;
+    .sinfondo-hero{
+        object-position: -15px -15px;
+    }
+
+    .sinfondo1-hero{
+        object-position: center -20px;
+    }
+    
+    .sinfondo2-hero{
+        object-position: center;
     }
 
     .hero-text {
@@ -272,6 +283,5 @@
     .doctor-image {
         max-width: 250px;
         height: 250px;
-        margin: 10px;
     }
 }

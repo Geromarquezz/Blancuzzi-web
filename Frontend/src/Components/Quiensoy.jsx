@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react'
 import './Quiensoy.css'
 import './Sections.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import img3 from '../assets/Fotos/Img ella 3.jpeg'
-import img5 from '../assets/Fotos/Img ella 5.jpeg'
+import img3 from '../assets/Fotos/Img-ella-3.webp'
+import img5 from '../assets/Fotos/Img-ella-5.webp'
 
 const Quiensoy = () => {
     const images = [img3, img5]

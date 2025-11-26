@@ -15,7 +15,7 @@ import { initializeOAuth2Client } from './Services/googleTokens.Service.js';
 process.setMaxListeners(15);
 
 // Cargar variables de entorno desde .env.dev en desarrollo
-dotenv.config({ path: '.env.dev' });
+dotenv.config({ path: '.env.prod' });
 
 const BACKEND_URL = process.env.BACKEND_URL;
 const FRONTEND_URL = process.env.FRONTEND_URL;

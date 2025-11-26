@@ -8,6 +8,7 @@
 
 # Sensitive configuration files
 Client ID de google auth local.json
+Client ID de google auth Produccion.json
 
 # Node modules
 node_modules/

@@ -184,17 +184,17 @@ const Profile = () => {
 
   const getStatusColor = (status) => {
     switch(status) {   
-      case 'confirmed': return '#28a745'    // Verde para confirmado
-      case 'completed': return '#2881a7ff'  // Azul para completado
-      case 'cancelled': return '#dc3545'    // Rojo para cancelado
+      case 'confirmed': return '#28a745'    // Verde para Solicitados
+      case 'completed': return '#2881a7ff'  // Azul para Turnos ya asistidos
+      case 'cancelled': return '#dc3545'    // Rojo para Cancelados
       default: return '#6c757d'             // Gris por defecto
     }
   }
 
   const getStatusText = (status) => {
     switch(status) {
-      case 'confirmed': return 'Confirmado'
-      case 'completed': return 'Completado'
+      case 'confirmed': return 'Solicitado'
+      case 'completed': return 'Asistido'
       case 'cancelled': return 'Cancelado'
       default: return status
     }
@@ -451,7 +451,7 @@ const Profile = () => {
                     borderBottom: activeTab === 'confirmed' ? '3px solid #28a745' : 'none'
                   }}
                 >
-                  Confirmados ({confirmedCount})
+                  Solicitados ({confirmedCount})
                 </button>
                 <button
                   onClick={() => handleTabChange('completed')}
@@ -462,7 +462,7 @@ const Profile = () => {
                     borderBottom: activeTab === 'completed' ? '3px solid #2881a7ff' : 'none'
                   }}
                 >
-                  Completados ({completedCount})
+                  Asistidos ({completedCount})
                 </button>
                 <button
                   onClick={() => handleTabChange('cancelled')}

@@ -1,9 +1,9 @@
-import Blanqueamiento from '../assets/Fotos/Blanqueamiento.png'
-import Strass from '../assets/Fotos/Strass.png'
-import Reconstrucciones from '../assets/Fotos/Reconstruccion-estetica.png'
-import Ortodoncia from '../assets/Fotos/Ortodoncia.png'
-import Endodoncia from '../assets/Fotos/Endodoncia.png'
-import Coronas from '../assets/Fotos/Coronas.png'
+import Blanqueamiento from '../assets/Fotos/Blanqueamiento.webp'
+import Strass from '../assets/Fotos/Strass.webp'
+import Reconstrucciones from '../assets/Fotos/Reconstruccion-estetica.webp'
+import Ortodoncia from '../assets/Fotos/Ortodoncia.webp'
+import Endodoncia from '../assets/Fotos/Endodoncia.webp'
+import Coronas from '../assets/Fotos/Coronas.webp'
 import './MisTrabajos.css'
 
 
@@ -56,7 +56,7 @@ const MisTrabajos = () => {
                 </article>
                 <article className="card" itemProp="medicalSpecialty" itemScope
                     itemType="https://schema.org/MedicalSpecialty">
-                    <h3 itemProp="name">Coronas Dentales</h3>
+                    <h3 itemProp="name">Coronas</h3>
                     <img src={Coronas}
                         alt="Coronas dentales en Villa María - prótesis dental" width="250"
                         height="200" loading="lazy"/>
@@ -99,7 +99,7 @@ const MisTrabajos = () => {
                 </article>
                 <article className="card" itemProp="medicalSpecialty" itemScope
                     itemType="https://schema.org/MedicalSpecialty">
-                    <h3 itemProp="name">Coronas Dentales</h3>
+                    <h3 itemProp="name">Coronas</h3>
                     <img src={Coronas} alt="Coronas dentales en Villa María - prótesis dental" width="250"
                         height="200"
                         loading="lazy"/>
