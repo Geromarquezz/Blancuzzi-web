@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }) => {
             }
             
             if (!silentFail) {
-                console.log('getUserData - estructura de respuesta inesperada:', data)
+                console.error('getUserData - estructura de respuesta inesperada')
             }
             return { success: false, message: 'No se pudieron obtener los datos del usuario' }
         } catch (error) {

@@ -1,12 +1,18 @@
-# Environment variables
+# Environment variables (contienen datos sensibles)
 .env
-.env.*
-*.env
+.env.dev
+.env.prod
+.env.local
+.env.development
+.env.production
 
-# Docker files with credentials
-docker-compose.local.yml
-docker-compose.production.yml
-.dockerignore
+# Archivos .env en cualquier carpeta
+**/.env
+**/.env.dev
+**/.env.prod
+**/.env.local
+**/.env.development
+**/.env.production
 
 # Sensitive configuration files
 Client ID de google auth local.json

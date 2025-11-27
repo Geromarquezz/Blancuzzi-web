@@ -43,7 +43,9 @@ const GoogleAuthSuccess = () => {
             navigate('/profile', { replace: true })
           }, 1000)
         } else {
-          console.log('GoogleAuthSuccess - Entrando al else de error')
+          if (import.meta.env.DEV) {
+            console.log('GoogleAuthSuccess - Entrando al else de error')
+          }
           toast.error('Error al verificar la autenticación')
           navigate('/login', { replace: true })
         }
