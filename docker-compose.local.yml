@@ -63,7 +63,7 @@ services:
     ports:
       - "${FRONTEND_PORT}:${FRONTEND_PORT}"
     environment:
-      - VITE_API_BASE_URL: ${VITE_API_BASE_URL}
+      VITE_API_BASE_URL: ${VITE_API_BASE_URL}
     volumes:
       - ./Frontend:/app
       - /app/node_modules
