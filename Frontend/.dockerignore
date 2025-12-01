@@ -1,0 +1,23 @@
+# Archivos y directorios a ignorar
+node_modules
+npm-debug.log
+.git
+.gitignore
+*.md
+.vscode
+.idea
+dist
+build
+coverage
+.DS_Store
+Thumbs.db
+*.log
+README.md
+DEPLOYMENT.md
+
+# Los .env del Frontend ya NO se usan en Docker
+# La variable VITE_API_BASE_URL se pasa como ARG desde docker-compose
+.env
+.env.development
+.env.production
+.env.*

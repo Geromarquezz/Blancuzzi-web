@@ -71,6 +71,11 @@ app.use("/api/auth", authRoutes); // Autenticación tradicional (email/password)
 app.use("/api/users", userRouter); // Usuarios routes
 app.use("/api/turnos", turnoRouter); // Turnos routes
 
+// Healthcheck y ruta raíz
+app.get('/', (req, res) => {
+    res.status(200).send({ status: 'ok', uptime: process.uptime() });
+});
+
 // Ruta raíz
 const startServer = async () => {
     try {
